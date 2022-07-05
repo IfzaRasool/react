@@ -1,5 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;1,500&family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;1,500&family=Roboto:ital,wght@0,400;0,500;0,700;1,900&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: var(--white);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --primary-color: #6ec1e4;
+  --secondary-color: #54595f;
+  --text-color: #7a7a7a;
+  --accent-color: #61ce70;
+  --thm-font: 'Open Sans', sans-serif;
+  --heading-font: 'Work Sans', sans-serif;
+  --thm-base-color: #20dfe3;
+  --thm-base-color-rgb: 32, 223, 227;
+  --thm-primary-color: #5538f4;
+  --thm-primary-color-rgb: 85, 56, 244;
+  --thm-black-color: #2d2c2c;
+  --thm-black-color-rgb: 45, 44, 44;
+  --thm-gray-color: #f0f1f5;
+  --thm-text-color: #848484;
+  --white: #ffff;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  display: inline-block;
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.para {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.header {
+  height: 9.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5.4rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+  font-size: 1.5rem;
+}
+
+.navbar-list .navbar-btn {
+  padding: 1.2rem 2.4rem;
+  background-color: var(--thm-base-color);
+  border: 1px solid;
+  border-radius: 5rem;
+  transition: all 0.3s linear;
+}
+
+.navbar-list .navbar-link:hover,
+.navbar-list .navbar-link:active {
+  color: var(--thm-base-color);
+}
+
+.navbar-btn:hover,
+.navbar-btn:active {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.mobile-nav-icon {
+  font-size: 4rem;
+}
+
+.mobile-navbar-btn {
+  display: none;
+}
+
+/* .mobile-navbar-icon[name=*close*] {
+  display: none;
+} */
+
+/* reusable code */
+
+.section {
+  padding: 9.6rem 0;
+}
+
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.grid-two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.btn {
+  font-size: 1.6rem;
+  padding: 1.6rem 3.2rem;
+  background-color: var(--thm-base-color);
+  color: var(--white);
+  border: 0 solid var(--thm-base-color);
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+/* hero section */
+
+.hero {
+  background-image: url(../src/components/images/sliderbg1.png);
+  background-repeat: no-repeat;
+}
+
+.section-hero {
+  position: relative;
+}
+
+.primary-heading {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.section-hero .para {
+  margin-top: 2rem;
+  margin-bottom: 3.2rem;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  position: absolute;
+  top: -7rem;
+}
+
+.hero-end img {
+  background-image: url(./components/images/appointmentbg1.jpg);
+  position: absolute;
+  display: flex;
+  justify-content: center;
 }
