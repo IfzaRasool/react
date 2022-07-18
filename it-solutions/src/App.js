@@ -2,14 +2,22 @@
 import './App.css';
 import Header from './components/header';
 import Home from './components/home';
+import Service from './components/service';
+import Solutions from './components/solutions';
+// import Register from './components/register';
 
 function App() {
   return (
     <div className="App">
-      <div className="hero">
-        <Header />
-        <Home />
-      </div>
+      <main>
+        <div className="hero">
+          <Header />
+          <Home />
+        </div>
+        {/* <Register /> */}
+        <Service />
+        <Solutions />
+      </main>
     </div>
   );
 }
