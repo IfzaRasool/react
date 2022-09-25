@@ -1,13 +1,269 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;1,500&family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;1,500&family=Roboto:ital,wght@0,400;0,500;0,700;1,900&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap');
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+
+  /* color: var(--white); */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --primary-color: #6ec1e4;
+  --secondary-color: #54595f;
+  --text-color: #7a7a7a;
+  --accent-color: #61ce70;
+  --thm-font: 'Open Sans', sans-serif;
+  --heading-font: 'Work Sans', sans-serif;
+  --thm-base-color: #20dfe3;
+  --thm-base-color-rgb: 32, 223, 227;
+  --thm-primary-color: #5538f4;
+  --thm-primary-color-rgb: 85, 56, 244;
+  --thm-black-color: #2d2c2c;
+  --thm-black-color-rgb: 45, 44, 44;
+  --thm-gray-color: #f0f1f5;
+  --thm-text-color: #848484;
+  --white: #ffff;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  display: inline-block;
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.para {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.header {
+  height: 9.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5.4rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+  font-size: 1.5rem;
+}
+
+.navbar-list .navbar-btn {
+  padding: 1.2rem 2.4rem;
+  background-color: var(--thm-base-color);
+  border: 1px solid;
+  border-radius: 5rem;
+  transition: all 0.3s linear;
+}
+
+.navbar-list .navbar-link,
+.navbar-list .navbar-btn {
+  color: var(--white);
+}
+
+.navbar-list .navbar-link:hover,
+.navbar-list .navbar-link:active {
+  color: var(--thm-base-color);
+}
+
+.navbar-btn:hover,
+.navbar-btn:active {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.mobile-nav-icon {
+  font-size: 4rem;
+}
+
+.mobile-navbar-btn {
+  display: none;
+}
+
+/* .mobile-navbar-icon[name=*close*] {
+  display: none;
+} */
+
+/* reusable code */
+
+/* .section {
+  padding: 9.6rem 0;
+} */
+
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.grid-two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.btn {
+  font-size: 1.6rem;
+  padding: 1.6rem 3.2rem;
+  background-color: var(--thm-base-color);
+  color: var(--white);
+  border: 0 solid var(--thm-base-color);
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+/* hero section */
+
+.hero {
+  background-image: url(../src/components/images/sliderbg1.png);
+  background-repeat: no-repeat;
+}
+
+.section-hero {
+  position: relative;
+  color: var(--white);
+  padding: 9.6rem 0 0 0;
+}
+
+.primary-heading {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.section-hero .para {
+  margin-top: 2rem;
+  margin-bottom: 3.2rem;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  margin-top: -7rem;
+  height: 70rem;
+}
+
+.hero-end {
+  background-image: url(./components/images/appointmentbg1.jpg);
+  background-repeat: no-repeat;
+}
+
+/* .hero-end img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+} */
+
+/* Service section style */
+.section-services {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(./components/images/servicebg1.jpg);
+  padding: 5rem 0;
+}
+
+.secondary-heading {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.grid-three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto;
+  padding: 6rem 3rem;
+  border: 2px solid var(--primary-color);
+  gap: 2rem;
+  background-color: var(--white);
+}
+
+.card > img {
+  width: 7rem;
+}
+
+.service-para {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  line-height: 2.5rem;
+}
+
+/* solution section style */
+.solution-section {
+  margin: 10rem auto;
+  border: 2px solid var(--primary-color);
+}
+
+.sol-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sol-left-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sol-item {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: lowercase;
+}
+
+.sol-item::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a
+  bullet */
+  color: var(--thm-base-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 2rem;
 }
